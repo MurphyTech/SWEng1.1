@@ -5,8 +5,6 @@
  */
 package com.mycompany.sweng1;
 
-import org.joda.time.*;
-
 /**
  *
  * @author David
@@ -14,38 +12,35 @@ import org.joda.time.*;
  */
 public class student {
     private String Name;
-    private Years Age;
-    private LocalDate Birthdate;
-    private LocalDate now = new LocalDate();
+    private int Age;
+    private int Birthdate;
     private String UserName;
     
-    public void setName(String name){
-        Name = name;
+    public void setName(String fname, String surName){
+        Name = (fname + surName);
     }
 
     public String getName(){
         return this.Name;
     }
     
-    public void setAge(Years age){
+    public void setAge(int age){
         Age = age;
     }
-    public Years getAge(){
+    public int getAge(){
         return this.Age;
     }
     
-    public void setDOB(LocalDate dob){
+    public void setDOB(int dob){
         Birthdate = dob;
-        Years CurAge = Years.yearsBetween(Birthdate, now);
-        setAge(CurAge);
     }
     
-    public LocalDate getDOB(){
+    public int getDOB(){
         return this.Birthdate;
     }
     
     public void genUserName(){
-        UserName = Name + Age;
+        UserName = (Name + Age);
     }
     
     public String getUserName(){
