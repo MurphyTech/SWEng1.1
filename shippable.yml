@@ -2,6 +2,9 @@ language: java
 
 jdk:
    - openjdk7
+   
+before_install:
+   - mvn install:install-file -Dfile=https://mvnrepository.com/artifact/joda-time/joda-time
 
 after_success:
    - mvn clean cobertura:cobertura
