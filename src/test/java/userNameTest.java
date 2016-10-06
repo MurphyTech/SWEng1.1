@@ -7,7 +7,6 @@
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 import com.mycompany.sweng1.student;
-import org.joda.time.LocalDate;
 
 /**
  *
