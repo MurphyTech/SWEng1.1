@@ -15,9 +15,7 @@ import com.mycompany.sweng1.student;
 public class userNameTest {
     @Test
     public void testUserName(){
-       student Student = new student();
-       Student.setName("John", "Smith");
-       Student.setAge(22);
+       student Student = new student("John Smith", 22, "01/01/1970");
        Student.genUserName();
        String UsrName = Student.getUserName();
        

@@ -24,4 +24,5 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+    <name>SWEng1.1</name>
 </project>

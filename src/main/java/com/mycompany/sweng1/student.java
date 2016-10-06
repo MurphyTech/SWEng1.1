@@ -13,11 +13,18 @@ package com.mycompany.sweng1;
 public class student {
     private String Name;
     private int Age;
-    private int Birthdate;
+    private String Birthdate;
     private String UserName;
     
-    public void setName(String fname, String surName){
-        Name = (fname + surName);
+    public student(String name, int age, String dob){
+        this.Name = name;
+        this.Age = age;
+        this.Birthdate = dob;
+        genUserName();
+    }
+    
+    public void setName(String name){
+        Name = name;
     }
 
     public String getName(){
@@ -31,11 +38,11 @@ public class student {
         return this.Age;
     }
     
-    public void setDOB(int dob){
+    public void setDOB(String dob){
         Birthdate = dob;
     }
     
-    public int getDOB(){
+    public String getDOB(){
         return this.Birthdate;
     }
     
