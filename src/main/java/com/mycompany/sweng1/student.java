@@ -47,7 +47,8 @@ public class student {
     }
     
     public void genUserName(){
-        UserName = (Name + Age);
+        String Tmp = Name.replaceAll("\\s+","");
+        UserName = (Tmp + Age);
     }
     
     public String getUserName(){
