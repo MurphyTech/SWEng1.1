@@ -59,15 +59,15 @@ public class course_programme {
     }
     
     public void printINFO(){
-        List<student> StudentsList = new ArrayList<student>();
+        List<student> StudentsList = new ArrayList();
         
-        List<module> ModulesList = new ArrayList<module>();
+        List<module> ModulesList = new ArrayList();
         ModulesList = this.getModuleList();
         System.out.println("Students registered for " + this.getCourse_Name() + ":");
         for (int i =0; i<ModulesList.size(); i++){
             module mod = ModulesList.get(i);
             //System.out.println("Module: " + mod.getModule_Name() + " | " + mod.getModule_ID());
-            List<student> ModStudents = new ArrayList<student>();
+            List<student> ModStudents = new ArrayList();
             ModStudents = mod.getStudentList();
             for (int j=0; j<ModStudents.size(); j++){
                 student s = ModStudents.get(j);
@@ -80,7 +80,7 @@ public class course_programme {
             }
         }
         for (int k=0; k<StudentsList.size(); k++){
-            System.out.println(StudentsList.get(k) + " Modules: " + this.getModuleList());
+            System.out.println(StudentsList.get(k).getName() + " Modules: " + ModulesList);
         }
     }
 }
