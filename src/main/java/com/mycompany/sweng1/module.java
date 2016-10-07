@@ -17,6 +17,12 @@ public class module {
     private String Module_ID;
     private List<student> Students = new ArrayList<student>();
     
+    public module(String modName, String id, List studentList){
+        this.Module_Name = modName;
+        this.Module_ID = id;
+        this.Students = studentList;
+    }
+    
     public void setModule_Name(String name){
         Module_Name = name;
     }

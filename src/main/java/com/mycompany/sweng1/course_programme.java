@@ -19,6 +19,13 @@ public class course_programme {
     private LocalDate Start_Date;
     private LocalDate End_Date;
     
+    public course_programme(String CourseName, List moduleList, LocalDate start, LocalDate end){
+        this.Course_Name = CourseName;
+        this.Modules = moduleList;
+        this.Start_Date = start;
+        this.End_Date = end;
+    }    
+    
     public void setCourse_Name(String name){
         Course_Name = name;
     }
