@@ -65,10 +65,12 @@ public class course_programme {
         ModulesList = this.getModuleList();
          for (int i =0; i<ModulesList.size(); i++){
             module mod = ModulesList.get(i);
+            System.out.println("Module: " + mod.getModule_Name() + " | " + mod.getModule_ID());
             List<student> ModStudents = new ArrayList<student>();
             ModStudents = mod.getStudentList();
             for (int j=0; j<ModStudents.size(); j++){
                 student s = ModStudents.get(j);
+                
                 System.out.println(s.getName());
                 
             }
