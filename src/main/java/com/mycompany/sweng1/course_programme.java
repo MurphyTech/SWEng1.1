@@ -63,16 +63,24 @@ public class course_programme {
         
         List<module> ModulesList = new ArrayList<module>();
         ModulesList = this.getModuleList();
-         for (int i =0; i<ModulesList.size(); i++){
+        System.out.println("Students registered for " + this.getCourse_Name() + ":");
+        for (int i =0; i<ModulesList.size(); i++){
             module mod = ModulesList.get(i);
-            System.out.println("Module: " + mod.getModule_Name() + " | " + mod.getModule_ID());
+            //System.out.println("Module: " + mod.getModule_Name() + " | " + mod.getModule_ID());
             List<student> ModStudents = new ArrayList<student>();
             ModStudents = mod.getStudentList();
             for (int j=0; j<ModStudents.size(); j++){
                 student s = ModStudents.get(j);
-                System.out.println("Name: " + s.getName() + " UserName: " + s.getUserName());
+                if (StudentsList.contains(s)){
+                    //Do Nothing
+                }
+                else {
+                    StudentsList.add(s);
+                }
             }
-         }
-         System.out.println();
+        }
+        for (int k=0; k<StudentsList.size(); k++){
+            System.out.println(StudentsList.get(k) + " Modules: " + this.getModuleList());
+        }
     }
 }
