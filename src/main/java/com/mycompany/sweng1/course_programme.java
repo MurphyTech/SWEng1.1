@@ -58,4 +58,20 @@ public class course_programme {
         return this.End_Date;
     }
     
+    public void printINFO(){
+        List<student> StudentsList = new ArrayList<student>();
+        
+        List<module> ModulesList = new ArrayList<module>();
+        ModulesList = this.getModuleList();
+         for (int i =0; i<ModulesList.size(); i++){
+            module mod = ModulesList.get(i);
+            List<student> ModStudents = new ArrayList<student>();
+            ModStudents = mod.getStudentList();
+            for (int j=0; j<ModStudents.size(); j++){
+                student s = ModStudents.get(j);
+                System.out.println(s.getName());
+                
+            }
+         }
+    }
 }
