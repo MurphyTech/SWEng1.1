@@ -76,13 +76,13 @@ public class course_programme {
                 }
                 else {
                     StudentsList.add(s);
-                    System.out.println(s.getName());
+                    System.out.println(s.getName() + "\tModules: ");
                     for (int l=0; l<ModulesList.size(); l++){
-                        System.out.print(Modules.get(l).getModule_Name());
+                        System.out.print(Modules.get(l).getModule_Name() + "\t");
                     }
+                    System.out.println();
                 }
             } 
         }
-        System.out.println();
     }
 }
