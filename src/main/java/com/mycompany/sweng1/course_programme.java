@@ -70,10 +70,9 @@ public class course_programme {
             ModStudents = mod.getStudentList();
             for (int j=0; j<ModStudents.size(); j++){
                 student s = ModStudents.get(j);
-                
-                System.out.println(s.getName());
-                
+                System.out.println("Name: " + s.getName() + " UserName: " + s.getUserName());
             }
          }
+         System.out.println();
     }
 }
